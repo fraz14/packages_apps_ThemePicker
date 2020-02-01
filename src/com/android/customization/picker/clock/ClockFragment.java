@@ -101,7 +101,7 @@ public class ClockFragment extends ToolbarFragment {
         mError = view.findViewById(R.id.error_section);
         setUpOptions();
         boolean showStatusArea = Settings.System.getInt(getContext().getContentResolver(),
-                                    Settings.System.CLOCK_SHOW_STATUS_AREA, 0) == 1;
+                                    Settings.System.CLOCK_SHOW_STATUS_AREA, 1) == 1;
         mStatusArea = view.findViewById(R.id.show_statusarea);
         mStatusArea.setChecked(showStatusArea);
         view.findViewById(R.id.apply_button).setOnClickListener(v -> {
